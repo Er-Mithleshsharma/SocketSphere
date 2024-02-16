@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  
+    <link rel="stylesheet" href="css/style.css" /> 
+     <link rel="stylesheet" href="output.css">
+    <title>socketsphere</title>
+  </head>
+  <body>
+    <div class="chat-container max-w-1100 bg-black mx-auto my-30 overflow-hidden h-screen">
+      <header class="chat-header 
+      bg-violet-500 bg-dark-color-a text-white rounded-t-lg py-4 px-6 flex items-center justify-between">
+         <div class="flex items-center">
+          <img src="paper-plane.png" alt="" srcset="" class=" h-10">
+          <h1 class="pl-5 font-bold">Socket Sphere</h1>
+         </div>
+        
+        <a id="leave-btn" class="btn cursor-pointer px-3 py-1 bg-light-color text-dark-color-a border-0 text-base">Leave Room</a>
+      </header>
+      <main class="chat-main grid grid-cols-1 md:grid-cols-5">
+        <div class="chat-sidebar bg-dark-color-b text-white p-20 pb-60 overflow-y-scroll ">
+          <h3><i class="fas fa-comments"></i> Room Name:</h3>
+          <h2 id="room-name" class="text-lg bg-opacity-10 bg-black p-2 mb-10"></h2>
+          <h3><i class="mb-15 fas fa-users"></i> Users</h3>
+          <ul id="users"></ul>
+        </div>
+        <div class="chat-messages col-span-4 max-h-[500px] lg:p-20 overflow-y-scroll message p-10 mb-15 bg-light-color rounded overflow-wrap">
+        </div>
+      </main>
+      <div class="chat-form-container p-5 md:p-5 bg-violet-500">
+        <form id="chat-form" class="flex">
+          <input id="msg"  placeholder="Enter Message"
+          type="text" class="text-base p-2 h-10 flex-1" required autocomplete="off">
+          <button class="btn cursor-pointer px-3 py-1 bg-light-color text-dark-color-a border-0 text-base"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

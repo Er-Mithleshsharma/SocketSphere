@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="./output.css" />
+		<title>SocketSphere</title>
+	</head>
+	<body class="grid sm:grid-cols-1 md:grid-cols-2">
+        <div class="left hidden sm:block h-screen">
+            <img src="mainpic.jpg" alt="convo-pic" class="w-full h-full object-cover">
+        </div>
+        <div class="right
+        bg-violet-500 h-screen p-5 sm:p-24 flex flex-col items-center justify-center">
+            <div id = "welcome" class="mb-10 sm:mb-20 "> <h1 class="text-4xl md:text-8xl">Start chatting </h1></div>
+            <div class="join-container">
+                <div class="join-main">
+                    <form action="chat.html" class="flex flex-col justify-center items-center">
+                        <div class="form-control">
+                            <div>
+                                <input type="text" name="username" id="username" class="mb-10 px-10  py-3 bg-gray-800 text-gray-500" placeholder="Enter Username" required />
+                            </div>
+                
+                        </div>
+                        <div class="form-control select">
+                            <select data-te-select-init name="room" id="room" class="px-20 py-3 bg-gray-800 text-gray-500">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five</option>
+                              </select>
+                            <div class="select_arrow">
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn mt-5 ">Join Chat</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
